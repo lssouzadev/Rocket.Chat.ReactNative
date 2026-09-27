@@ -16,7 +16,7 @@ Esta branch parte da branch oficial `single-server` do Rocket.Chat e é destinad
 
 ## Pendente antes do uso operacional
 
-1. Substituir `https://replace-me.invalid` em `app.json` pelo subdomínio definitivo do Rocket.Chat.
+1. Endpoint configurado: `https://rocket-api.forous.com.br`.
 2. Criar o app Android no Firebase com package `com.espacoicelaser.chat`.
 3. Adicionar `android/app/google-services.json` quando formos habilitar push.
 4. Configurar o gateway de push do Rocket.Chat com as credenciais Firebase próprias.
