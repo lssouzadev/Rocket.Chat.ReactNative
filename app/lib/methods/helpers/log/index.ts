@@ -42,17 +42,29 @@ export const logEvent = (eventName: string, payload?: { [key: string]: any }): v
 };
 
 export const setCurrentScreen = (currentScreen: string): void => {
-	analytics().logScreenView({ screen_class: currentScreen, screen_name: currentScreen });
+	try {
+		analytics().logScreenView({ screen_class: currentScreen, screen_name: currentScreen });
+	} catch {
+		// Firebase is optional in the first internal white-label build.
+	}
 	bugsnag.leaveBreadcrumb(currentScreen, { type: 'navigation' });
 };
 
 export const toggleCrashErrorsReport = (value: boolean): boolean => {
-	crashlytics().setCrashlyticsCollectionEnabled(value);
+	try {
+		crashlytics().setCrashlyticsCollectionEnabled(value);
+	} catch {
+		// Firebase is optional in the first internal white-label build.
+	}
 	return (reportCrashErrors = value);
 };
 
 export const toggleAnalyticsEventsReport = (value: boolean): boolean => {
-	analytics().setAnalyticsCollectionEnabled(value);
+	try {
+		analytics().setAnalyticsCollectionEnabled(value);
+	} catch {
+		// Firebase is optional in the first internal white-label build.
+	}
 	return (reportAnalyticsEvents = value);
 };
 
@@ -61,7 +73,11 @@ const log = (e: any): void => {
 		bugsnag.notify(e, (event: { addMetadata: (arg0: string, arg1: {}) => void }) => {
 			event.addMetadata('details', { ...metadata });
 		});
-		crashlytics().recordError(e);
+		try {
+			crashlytics().recordError(e);
+		} catch {
+			// Firebase is optional in the first internal white-label build.
+		}
 	} else {
 		console.error(e);
 	}
