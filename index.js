@@ -27,17 +27,17 @@ if (process.env.USE_STORYBOOK) {
 		const options = {
 			android: {
 				// TODO: i18n
-				alertTitle: 'Permissions required',
-				alertDescription: 'This application needs to access your phone accounts',
-				cancelButton: 'Cancel',
+				alertTitle: 'Permissões necessárias',
+				alertDescription: 'Este aplicativo precisa acessar suas contas de chamada',
+				cancelButton: 'Cancelar',
 				okButton: 'Ok',
 				imageName: 'phone_account_icon',
 				additionalPermissions: [PermissionsAndroid.PERMISSIONS.READ_PHONE_STATE, PermissionsAndroid.PERMISSIONS.RECORD_AUDIO],
 				// Required to get audio in background when using Android 11
 				foregroundService: {
-					channelId: 'chat.rocket.reactnative',
-					channelName: 'Rocket.Chat',
-					notificationTitle: 'Voice call is running on background'
+					channelId: 'com.espacoicelaser.chat.calls',
+					channelName: 'Ice Laser',
+					notificationTitle: 'Chamada de voz em andamento'
 				},
 				selfManaged: true
 			}
