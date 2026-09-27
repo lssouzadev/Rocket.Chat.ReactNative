@@ -1,25 +1,27 @@
+import { ICE_LASER_BRAND } from './brand';
+
 const backdropColor = '#000000';
 const overlayBackground = 'rgba(31, 35, 41, 0.65)';
 
 const light = {
 	surfaceLight: '#FFFFFF',
-	surfaceTint: '#F7F8FA',
+	surfaceTint: ICE_LASER_BRAND.colors.warmTint,
 	surfaceRoom: '#FFFFFF',
 	surfaceNeutral: '#E4E7EA',
 	surfaceDisabled: '#F7F8FA',
 	surfaceHover: '#F2F3F5',
 	surfaceSelected: '#D7DBE0',
 	surfaceDark: '#1F2329',
-	surfaceFeatured: '#5F1477',
-	surfaceFeaturedHover: '#4A105D',
+	surfaceFeatured: ICE_LASER_BRAND.colors.copper,
+	surfaceFeaturedHover: ICE_LASER_BRAND.colors.copperDark,
 
 	strokeExtraLight: '#EBECEF',
 	strokeLight: '#CBCED1',
 	strokeMedium: '#9EA2A8',
 	strokeDark: '#6C727A',
 	strokeExtraDark: '#2F343D',
-	strokeExtraLightHighlight: '#D1EBFE',
-	strokeHighlight: '#156FF5',
+	strokeExtraLightHighlight: ICE_LASER_BRAND.colors.warmHighlight,
+	strokeHighlight: ICE_LASER_BRAND.colors.copper,
 	strokeExtraLightError: '#FFC1C9',
 	strokeError: '#EC0D2A',
 
@@ -30,7 +32,7 @@ const light = {
 	fontSecondaryInfo: '#6C727A',
 	fontDefault: '#2F343D',
 	fontTitlesLabels: '#1F2329',
-	fontInfo: '#095AD2',
+	fontInfo: ICE_LASER_BRAND.colors.copperDark,
 	fontDanger: '#D40C26',
 	fontPureBlack: '#2F343D',
 	fontPureWhite: '#FFFFFF',
@@ -51,7 +53,7 @@ const light = {
 	statusFontService2: '#7F1B9F',
 
 	badgeBackgroundLevel1: '#6C727A',
-	badgeBackgroundLevel2: '#1D74F5',
+	badgeBackgroundLevel2: ICE_LASER_BRAND.colors.copper,
 	badgeBackgroundLevel3: '#F38C39',
 	badgeBackgroundLevel4: '#F5455C',
 
@@ -61,9 +63,9 @@ const light = {
 	userPresenceOffline: '#6C727A',
 	userPresenceDisabled: '#F38C39',
 
-	buttonBackgroundPrimaryDefault: '#156FF5',
-	buttonBackgroundPrimaryPress: '#10529E',
-	buttonBackgroundPrimaryDisabled: '#D1EBFE',
+	buttonBackgroundPrimaryDefault: ICE_LASER_BRAND.colors.copper,
+	buttonBackgroundPrimaryPress: ICE_LASER_BRAND.colors.copperDark,
+	buttonBackgroundPrimaryDisabled: ICE_LASER_BRAND.colors.warmDisabled,
 
 	buttonBackgroundSecondaryDefault: '#E4E7EA',
 	buttonBackgroundSecondaryPress: '#9EA2A8',
@@ -81,7 +83,7 @@ const light = {
 	buttonBackgroundSuccessPress: '#0D5940',
 	buttonBackgroundSuccessDisabled: '#C0F6E4',
 
-	buttonFontPrimary: '#FFFFFF',
+	buttonFontPrimary: ICE_LASER_BRAND.colors.black,
 	buttonPrimaryDisabled: '#FFFFFF',
 	buttonFontSecondary: '#1F2329',
 	buttonSecondaryDisabled: '#CBCED1',
@@ -102,8 +104,8 @@ const dark = {
 	surfaceHover: '#1A1E23',
 	surfaceSelected: '#3C3F44',
 	surfaceDark: '#E4E7EA',
-	surfaceFeatured: '#5F1477',
-	surfaceFeaturedHover: '#4A105D',
+	surfaceFeatured: ICE_LASER_BRAND.colors.copper,
+	surfaceFeaturedHover: ICE_LASER_BRAND.colors.copperDark,
 
 	strokeExtraLight: '#2F343D',
 	strokeLight: '#333842',
@@ -111,7 +113,7 @@ const dark = {
 	strokeDark: '#1F2329',
 	strokeExtraDark: '#CBCED1',
 	strokeExtraLightHighlight: '#87CBFC',
-	strokeHighlight: '#3976D1',
+	strokeHighlight: ICE_LASER_BRAND.colors.peach,
 	strokeExtraLightError: '#F49AA6',
 	strokeError: '#BB3E4E',
 
@@ -122,7 +124,7 @@ const dark = {
 	fontSecondaryInfo: '#9EA2A8',
 	fontDefault: '#C1C7D0',
 	fontTitlesLabels: '#F2F3F5',
-	fontInfo: '#739EDE',
+	fontInfo: ICE_LASER_BRAND.colors.peach,
 	fontDanger: '#CF6E7A',
 	fontPureBlack: '#2F343D',
 	fontPureWhite: '#FFFFFF',
@@ -143,7 +145,7 @@ const dark = {
 	statusFontService2: '#C393D2',
 
 	badgeBackgroundLevel1: '#484C51',
-	badgeBackgroundLevel2: '#2C65BA',
+	badgeBackgroundLevel2: ICE_LASER_BRAND.colors.copper,
 	badgeBackgroundLevel3: '#955828',
 	badgeBackgroundLevel4: '#B43C4C',
 
@@ -153,9 +155,9 @@ const dark = {
 	userPresenceOffline: '#6C727A',
 	userPresenceDisabled: '#955828',
 
-	buttonBackgroundPrimaryDefault: '#095AD2',
-	buttonBackgroundPrimaryPress: '#245399',
-	buttonBackgroundPrimaryDisabled: '#1D3963',
+	buttonBackgroundPrimaryDefault: ICE_LASER_BRAND.colors.copper,
+	buttonBackgroundPrimaryPress: ICE_LASER_BRAND.colors.copperDark,
+	buttonBackgroundPrimaryDisabled: ICE_LASER_BRAND.colors.copperDeep,
 
 	buttonBackgroundSecondaryDefault: '#353B45',
 	buttonBackgroundSecondaryPress: '#454C59',
@@ -173,7 +175,7 @@ const dark = {
 	buttonBackgroundSuccessPress: '#134937',
 	buttonBackgroundSuccessDisabled: '#1E4B40',
 
-	buttonFontPrimary: '#FFFFFF',
+	buttonFontPrimary: ICE_LASER_BRAND.colors.black,
 	buttonPrimaryDisabled: '#6C727A',
 	buttonFontSecondary: '#E4E7EA',
 	buttonSecondaryDisabled: '#6C727A',
@@ -194,8 +196,8 @@ const black = {
 	surfaceHover: '#080808',
 	surfaceSelected: '#3C3F44',
 	surfaceDark: '#E4E7EA',
-	surfaceFeatured: '#5F1477',
-	surfaceFeaturedHover: '#4A105D',
+	surfaceFeatured: ICE_LASER_BRAND.colors.copper,
+	surfaceFeaturedHover: ICE_LASER_BRAND.colors.copperDark,
 
 	strokeExtraLight: '#2F343D',
 	strokeLight: '#1f2329',
@@ -203,7 +205,7 @@ const black = {
 	strokeDark: '#1F2329',
 	strokeExtraDark: '#CBCED1',
 	strokeExtraLightHighlight: '#87CBFC',
-	strokeHighlight: '#3976D1',
+	strokeHighlight: ICE_LASER_BRAND.colors.peach,
 	strokeExtraLightError: '#F49AA6',
 	strokeError: '#BB3E4E',
 
@@ -214,7 +216,7 @@ const black = {
 	fontSecondaryInfo: '#9EA2A8',
 	fontDefault: '#E4E7EA',
 	fontTitlesLabels: '#F2F3F5',
-	fontInfo: '#739EDE',
+	fontInfo: ICE_LASER_BRAND.colors.peach,
 	fontDanger: '#CF6E7A',
 	fontPureBlack: '#2F343D',
 	fontPureWhite: '#FFFFFF',
@@ -235,7 +237,7 @@ const black = {
 	statusFontService2: '#C393D2',
 
 	badgeBackgroundLevel1: '#484C51',
-	badgeBackgroundLevel2: '#2C65BA',
+	badgeBackgroundLevel2: ICE_LASER_BRAND.colors.copper,
 	badgeBackgroundLevel3: '#955828',
 	badgeBackgroundLevel4: '#B43C4C',
 
@@ -245,9 +247,9 @@ const black = {
 	userPresenceOffline: '#6C727A',
 	userPresenceDisabled: '#955828',
 
-	buttonBackgroundPrimaryDefault: '#3976D1',
-	buttonBackgroundPrimaryPress: '#245399',
-	buttonBackgroundPrimaryDisabled: '#1D3963',
+	buttonBackgroundPrimaryDefault: ICE_LASER_BRAND.colors.copper,
+	buttonBackgroundPrimaryPress: ICE_LASER_BRAND.colors.copperDark,
+	buttonBackgroundPrimaryDisabled: ICE_LASER_BRAND.colors.copperDeep,
 
 	buttonBackgroundSecondaryDefault: '#353B45',
 	buttonBackgroundSecondaryPress: '#454C59',
@@ -265,7 +267,7 @@ const black = {
 	buttonBackgroundSuccessPress: '#134937',
 	buttonBackgroundSuccessDisabled: '#1E4B40',
 
-	buttonFontPrimary: '#FFFFFF',
+	buttonFontPrimary: ICE_LASER_BRAND.colors.black,
 	buttonPrimaryDisabled: '#6C727A',
 	buttonFontSecondary: '#E4E7EA',
 	buttonSecondaryDisabled: '#6C727A',

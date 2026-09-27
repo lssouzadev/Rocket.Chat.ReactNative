@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactElement } from 'react';
-import { StyleSheet, View, PixelRatio, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, View, TouchableWithoutFeedback } from 'react-native';
 import Animated, {
 	cancelAnimation,
 	Extrapolate,
@@ -10,17 +10,16 @@ import Animated, {
 	withSequence,
 	withTiming
 } from 'react-native-reanimated';
-import { Image } from 'expo-image';
 
 import { useTheme } from '../../theme';
 import EventEmitter from '../../lib/methods/helpers/events';
+import BrandMark from '../../components/BrandMark';
 
 const LOADING_EVENT = 'LOADING_EVENT';
 export const LOADING_TEST_ID = 'loading';
 export const LOADING_BUTTON_TEST_ID = 'loading-button';
 export const LOADING_IMAGE_TEST_ID = 'loading-image';
 
-const AnimatedImage = Animated.createAnimatedComponent(Image);
 
 const styles = StyleSheet.create({
 	container: {
@@ -28,10 +27,6 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center'
 	},
-	image: {
-		width: PixelRatio.get() * 40,
-		height: PixelRatio.get() * 40
-	}
 });
 
 interface ILoadingEvent {
@@ -116,12 +111,9 @@ const Loading = (): ReactElement | null => {
 							animatedOpacity
 						]}
 					/>
-					<AnimatedImage
-						source={require('../../static/images/logo.png')}
-						style={[styles.image, animatedScale]}
-						testID={LOADING_IMAGE_TEST_ID}
-						contentFit='contain'
-					/>
+					<Animated.View style={animatedScale} testID={LOADING_IMAGE_TEST_ID}>
+						<BrandMark size={72} />
+					</Animated.View>
 				</View>
 			</TouchableWithoutFeedback>
 		</View>
