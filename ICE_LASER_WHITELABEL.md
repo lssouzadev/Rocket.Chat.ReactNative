@@ -17,8 +17,8 @@ Esta branch parte da branch oficial `single-server` do Rocket.Chat e é destinad
 ## Pendente antes do uso operacional
 
 1. Endpoint configurado: `https://rocket-api.forous.com.br`.
-2. Criar o app Android no Firebase com package `com.espacoicelaser.chat`.
-3. Adicionar `android/app/google-services.json` quando formos habilitar push.
+2. Firebase Android configurado para `com.espacoicelaser.chat`.
+3. `android/app/google-services.json` adicionado ao projeto.
 4. Configurar o gateway de push do Rocket.Chat com as credenciais Firebase próprias.
 5. Configurar assinatura de produção do APK/AAB sem commitar chaves ou senhas.
 
