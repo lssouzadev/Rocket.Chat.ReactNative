@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1099450277820",
+    "project_id": "espaco-ice-laser-chat",
+    "storage_bucket": "espaco-ice-laser-chat.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1099450277820:android:a817d47998458efd6b95b9",
+        "android_client_info": {
+          "package_name": "com.espacoicelaser.chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBriQjEoiB_KZe6EUYOKIGBBtWjY1ppnrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
